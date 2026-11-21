@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PULJ × BLU — Resultados da prospecção ativa</title>
+<meta name="description" content="Resultados da prospecção ativa realizada pela BLU Sales Group para a PULJ Advogados." />
+<meta name="theme-color" content="#060C09" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<nav class="rail" id="rail" aria-label="Seções"></nav>
+<div class="demo-badge" id="demo-badge" hidden>Dados de exemplo · trocar em <code>data.js</code></div>
+
+<main>
+
+  <!-- ABERTURA -->
+  <section class="hero" id="abertura" data-label="Abertura">
+    <div class="hero-spot" id="hero-spot" aria-hidden="true"></div>
+    <svg class="hero-shield" id="hero-shield" viewBox="0 0 200 240" fill="none" aria-hidden="true">
+      <path class="sh-outline" d="M100 8 L190 40 V120 C190 175 150 215 100 236 C50 215 10 175 10 120 V40 Z" />
+      <path class="sh-chev" d="M48 140 L100 168 L152 140" />
+      <path class="sh-chev" d="M48 162 L100 190 L152 162" />
+      <path class="sh-chev" d="M62 120 L100 140 L138 120" />
+    </svg>
+
+    <div class="wrap hero-inner">
+      <div class="logos" id="hero-logos">
+        <img class="logo-puj" src="assets/puj-logo.png" alt="PULJ Advogados" width="126" height="46" />
+        <span class="sep" aria-hidden="true"></span>
+        <img class="logo-blu" src="assets/blu-logo.png" alt="BLU Sales Group" width="93" height="52" />
+      </div>
+
+      <p class="mono eyebrow" id="hero-periodo"></p>
+      <h1 class="display" id="hero-title"></h1>
+      <p class="lede" id="hero-lede"></p>
+      <div class="hero-kpis" id="hero-kpis"></div>
+    </div>
+
+    <div class="scroll-cue mono" aria-hidden="true"><span></span>role para ler</div>
+  </section>
+
+  <!-- MÉTODO -->
+  <section class="sec" id="metodo" data-label="Método">
+    <div class="wrap grid">
+      <header class="sec-side"><p class="mono label">Método</p></header>
+      <div class="sec-main">
+        <h2 class="h2 split">Um comercial tem três camadas. <em>Vender bem é controlar as três.</em></h2>
+        <p class="lede">A maioria das operações vende com uma perna só: mais ligação, mais mensagem. A BLU trata a prospecção como um sistema — primeiro decide onde vale a pena jogar, depois define estrutura e ritmo, e só então executa com tudo registrado.</p>
+
+        <div class="layers" id="layers">
+          <button class="layer is-open" type="button" aria-expanded="true">
+            <span class="layer-name">Estratégica</span>
+            <span class="layer-q">Onde vale a pena vender?</span>
+            <span class="layer-body">Antes de abordar qualquer empresa, definimos com dados quais são as certas. Nesta operação, o critério de porte (hoje, faturamento seguramente acima de R$ 200 milhões) e a checagem de ação já ajuizada em IPI e PAT.</span>
+          </button>
+          <button class="layer" type="button" aria-expanded="false">
+            <span class="layer-name">Tática</span>
+            <span class="layer-q">Com que estrutura e ritmo?</span>
+            <span class="layer-body">A estratégia vira plano de execução: quantas pessoas, o que cada uma faz por dia, qual cadência de contatos e o que conta como uma reunião de qualidade.</span>
+          </button>
+          <button class="layer" type="button" aria-expanded="false">
+            <span class="layer-name">Operacional</span>
+            <span class="layer-q">Está acontecendo de verdade?</span>
+            <span class="layer-body">Cada ligação, e-mail e mensagem fica registrado. A gestão enxerga tudo e corrige a rota toda semana, sem depender de relato — e é desse registro que vêm os números deste documento.</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESES -->
+  <section class="sec" id="teses" data-label="As teses">
+    <div class="wrap grid">
+      <header class="sec-side"><p class="mono label">O que prospectamos</p></header>
+      <div class="sec-main">
+        <h2 class="h2 split">Duas teses tributárias, <em>uma janela curta.</em></h2>
+        <div class="teses" id="teses-list"></div>
+        <div class="janela" id="janela"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JORNADA -->
+  <section class="sec" id="jornada" data-label="A jornada">
+    <div class="wrap grid">
+      <header class="sec-side"><p class="mono label">A jornada do projeto</p></header>
+      <div class="sec-main">
+        <h2 class="h2 split">Da primeira linha de código <em>à reta final.</em></h2>
+        <ol class="tl" id="tl"></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUMO -->
+  <section class="sec" id="resumo" data-label="Resumo">
+    <div class="wrap grid">
+      <header class="sec-side"><p class="mono label">Resumo até aqui</p></header>
+      <div class="sec-main">
+        <h2 class="h2 split">O projeto em <em>quatro números.</em></h2>
+        <div class="kpi-grid" id="kpi-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNIL (papel) -->
+  <section class="sec paper" id="funil" data-label="Funil">
+    <div class="wrap grid">
+      <header class="sec-side"><p class="mono label">O funil</p></header>
+      <div class="sec-main">
+        <h2 class="h2 split">Dos leads ao contrato, <em>etapa por etapa.</em></h2>
+        <p class="lede">Cada barra é proporcional ao volume real da etapa. O número sobre a linha mostra quanto da etapa anterior chegou até ali.</p>
+        <ol class="funnel" id="funnel"></ol>
+        <p class="paper-note" id="funnel-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RITMO -->
+  <section class="sec" id="ritmo" data-label="Ritmo">
+    <div class="wrap grid">
+      <header class="sec-side"><p class="mono label">Ritmo mensal</p></header>
+      <div class="sec-main">
+        <h2 class="h2 split">Como a operação <em>ganhou tração.</em></h2>
+        <p class="lede" id="ritmo-lede"></p>
+        <div class="months" id="months"></div>
+        <p class="note mono" id="months-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESFORÇO -->
+  <section class="sec" id="esforco" data-label="Esforço">
+    <div class="wrap grid">
+      <header class="sec-side"><p class="mono label">Esforço da operação</p></header>
+      <div class="sec-main">
+        <h2 class="h2 split">Onde o time <em>colocou a energia.</em></h2>
+        <p class="lede" id="esforco-lede"></p>
+        <div class="bars" id="canais"></div>
+        <div class="callout-num" id="ligsig"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFIL -->
+  <section class="sec" id="perfil" data-label="Perfil">
+    <div class="wrap grid">
+      <header class="sec-side"><p class="mono label">Quem sentou à mesa</p></header>
+      <div class="sec-main">
+        <h2 class="h2 split">O perfil das empresas <em>que viraram reunião.</em></h2>
+        <div class="tabs" id="perfil-tabs" role="tablist"></div>
+        <div class="bars" id="perfil-bars"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REUNIÕES -->
+  <section class="sec" id="reunioes" data-label="As reuniões">
+    <div class="wrap grid">
+      <header class="sec-side"><p class="mono label">Reuniões agendadas</p></header>
+      <div class="sec-main">
+        <h2 class="h2 split">As empresas, <em>uma a uma.</em></h2>
+        <p class="lede" id="reun-lede"></p>
+        <div class="chips" id="reun-chips"></div>
+        <div class="table-wrap">
+          <table class="ledger" id="reun-table">
+            <thead><tr><th>Empresa</th><th>Tese</th><th>UF</th><th>Término da cadência</th><th>Situação</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APRENDIZADOS -->
+  <section class="sec" id="aprendizados" data-label="Aprendizados">
+    <div class="wrap grid">
+      <header class="sec-side"><p class="mono label">Aprendizados</p></header>
+      <div class="sec-main">
+        <h2 class="h2 split">O que o caminho <em>ensinou.</em></h2>
+        <div class="cards" id="aprendizados-cards"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÓXIMOS PASSOS -->
+  <section class="sec" id="proximos" data-label="Próximos passos">
+    <div class="wrap grid">
+      <header class="sec-side"><p class="mono label">Próximos passos</p></header>
+      <div class="sec-main">
+        <h2 class="h2 split">Até dezembro, <em>três frentes.</em></h2>
+        <ol class="steps" id="proximos-list"></ol>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap">
+      <ul class="sources" id="fontes"></ul>
+      <div class="foot-row mono">
+        <span id="foot-left"></span>
+        <span>BLU Sales Group</span>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
